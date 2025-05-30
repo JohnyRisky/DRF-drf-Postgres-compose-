@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} Задача - {{ task.title }} {% endblock %}
+
+{% block content %}
+    <h2>Название: {{ task.title }}</h2>
+    <h3>Статус: {% if task.completed %}✔ Выполнена{% else %}✗ Не выполнена{% endif %}</h3>
+    <a href="{% url 'index' %}">← Назад к списку</a>
+{% endblock %}
